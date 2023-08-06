@@ -1,40 +1,43 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 export const toDoSlice = createSlice({
-  name: 'todos',
+  name: "todos",
   initialState: {
-    toDoList: [{
-      "id": 1,
-      "task": "Give dog a bath",
-      "complete": true
-    }, {
-      "id": 2,
-      "task": "Do laundry",
-      "complete": true
-    }, {
-      "id": 3,
-      "task": "Vacuum floor",
-      "complete": false
-    }, {
-      "id": 4,
-      "task": "Feed cat",
-      "complete": true
-    }, {
-      "id": 5,
-      "task": "Change light bulbs",
-      "complete": false
-    }
+    toDoList: [
+      {
+        id: 1,
+        task: "Give dog a bath",
+        complete: true,
+      },
+      {
+        id: 2,
+        task: "Do laundry",
+        complete: true,
+      },
+      {
+        id: 3,
+        task: "Vacuum floor",
+        complete: false,
+      },
+      {
+        id: 4,
+        task: "Feed cat",
+        complete: true,
+      },
+      {
+        id: 5,
+        task: "Change light bulbs",
+        complete: false,
+      },
     ],
   },
   reducers: {
-  
-    setToDoList: (state,action) => {
-      state.toDoList = action.payload
+    setToDoList: (state, action) => {
+      state.toDoList = action.payload;
     },
   },
-})
+});
 
-// Action creators are generated for each case reducer function
-export const { setToDoList } = toDoSlice.actions
+export const { setToDoList } = toDoSlice.actions;
 
-export default toDoSlice.reducer
+export default toDoSlice.reducer;
